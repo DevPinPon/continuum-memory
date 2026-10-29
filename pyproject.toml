@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "continuum-memory"
+version = "0.1.0"
+description = "Persistent, source-backed context memory across agent sessions with exact project scopes."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [{name = "DevPinPon"}]
+dependencies = []
+
+[project.optional-dependencies]
+dense = ["numpy>=1.26,<3", "onnxruntime>=1.18,<2", "tokenizers>=0.20,<1"]
+
+[project.urls]
+Repository = "https://github.com/DevPinPon/continuum-memory"
+Issues = "https://github.com/DevPinPon/continuum-memory/issues"
+
+[tool.setuptools]
+py-modules = ["shared_memory", "encoder"]
